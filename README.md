@@ -65,6 +65,11 @@ cct/
 ├── README.md                     ← You are here
 ├── WHITEPAPER.md                 ← Full formal paper (proofs, math, algorithms)
 │
+├── poc/                          ← WORKING PROOF OF CONCEPT
+│   ├── prism.py                  ← 3 test users, semantic transformation vectors
+│   ├── refract.py                ← Core refraction + bridge calculation
+│   └── experiment.py             ← Test harness: same query, different meanings
+│
 ├── theory/
 │   ├── 01-semantic-space.md      ← The 1024-bit manifold. Platonic semantics.
 │   ├── 02-user-as-prism.md       ← Why the user is the denominator
@@ -87,11 +92,23 @@ cct/
     └── related-work.md           ← Prior art, next steps, publication path
 ```
 
+### Run the PoC
+
+```bash
+git clone https://github.com/simonsbirka-rgb/semantic-prism-theory.git
+cd semantic-prism-theory
+python3 experiment.py
+```
+
+**Output:** Same concept "SUCCESS" produces different meanings for entrepreneur (magnitude 9.88), artist (6.01), and parent (6.28).
+
 ---
 
 ## Status
 
-**February 2026.** Theory complete. PoC implemented in [Centipuss](implementation/centipuss-poc.md). Formal paper in draft.
+**March 2026.** Theory complete. **PoC working.** Formal paper in draft.
+
+Run it yourself: `python3 experiment.py`
 
 ---
 
